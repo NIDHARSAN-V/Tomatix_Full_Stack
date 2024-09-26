@@ -47,7 +47,6 @@ mongoose.connect('mongodb://localhost:27017/Tomatix', {
 
 
 
-app.use
 
 app.post('/fertilizers', async (req, res) => {
     try {

@@ -18,6 +18,7 @@ const BaseStack = () => {
       if(res.data.success)
       {
         setIsAuth(true);
+        console.log("Successsssssss")
       }
      }
      catch(error)

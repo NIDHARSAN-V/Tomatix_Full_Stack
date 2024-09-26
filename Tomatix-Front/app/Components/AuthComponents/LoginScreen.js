@@ -18,12 +18,12 @@ function LoginScreen({navigation}) {
 
         try {
             axios.defaults.withCredentials = true;
-            const res = await axios.post("http://192.168.72.253:5501/user/login", userdata);
+            const res = await axios.post("http://192.168.231.72:5501/user/login", userdata);
             console.log(res.data.message);
             if (res.data.success) {
                 console.log("User : ",res.data.user);
                 console.log(res.data.tok);
-                navigation.push("Tabbb"); 
+                navigation.push("Home Screen"); 
                 
             } else {
                 Alert.alert("Error", res.data.message);
