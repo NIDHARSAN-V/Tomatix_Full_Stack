@@ -14,7 +14,7 @@ function TomatoView({ navigation }) {
 
   const fetchTomatoes = async () => {
     try {
-      const response = await fetch('https://192.168.231.72:5501/tomatoes');
+      const response = await fetch('https://tomatix-backend-1.onrender.com/tomatoes');
       const data = await response.json();
       setTomatoes(data);
     } catch (error) {
@@ -78,7 +78,7 @@ function TomatoAdd({ navigation }) {
     setLoading(true);
     const tomatoData = { TomatoName: tomatoName, quantity: parseInt(quantity), price: parseInt(price), state, contact };
     try {
-      const response = await fetch('https://192.168.231.72:5501/tomatoes', {
+      const response = await fetch('https://tomatix-backend-1.onrender.com/tomatoes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ function FertilizerView({ navigation }) {
 
   const fetchFertilizers = async () => {
     try {
-      const response = await fetch('https://192.168.231.72:5501/fertilizers');
+      const response = await fetch('https://tomatix-backend-1.onrender.com/fertilizers');
       const data = await response.json();
       setFertilizers(data);
     } catch (error) {
@@ -201,7 +201,7 @@ function FertilizerAdd({ navigation }) {
     setLoading(true);
     const fertilizerData = { fertilizerName, description, state, contact };
     try {
-      const response = await fetch('https://192.168.231.72:5501/fertilizers', {
+      const response = await fetch('https://tomatix-backend-1.onrender.com/fertilizers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

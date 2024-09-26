@@ -1,5 +1,5 @@
 const userModel = require("../../models/usermodel");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const jwt  = require("jsonwebtoken")
 //login by admin
 // const loginController = async (req, res) => {

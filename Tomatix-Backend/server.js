@@ -38,7 +38,7 @@ app.get("/logout" , async function(req,res)
     return res.status(201).send({message:"Logged Out" , success:true})
 })
 
-mongoose.connect('mongodb://localhost:27017/Tomatix', {
+mongoose.connect('mongodb+srv://tomatix234:tomatix@tomatix.mgvot.mongodb.net/?retryWrites=true&w=majority&appName=Tomatix', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

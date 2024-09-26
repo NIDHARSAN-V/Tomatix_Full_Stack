@@ -18,7 +18,7 @@ function LoginScreen({navigation}) {
 
         try {
             axios.defaults.withCredentials = true;
-            const res = await axios.post("http://192.168.231.72:5501/user/login", userdata);
+            const res = await axios.post("https://tomatix-backend-1.onrender.com:5501/user/login", userdata);
             console.log(res.data.message);
             if (res.data.success) {
                 console.log("User : ",res.data.user);
